@@ -19,6 +19,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sdsmdg.tastytoast.TastyToast;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -35,11 +37,13 @@ public class UserDetailsActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 123;
     public static final String PREFS = "prefs";
     public static final String PROFILE_PIC = "profile pic";
+    public static final String LEVEL = "level";
     private TextView etWelcome, tvMaxScore;
     private ImageView profilePicture;
     private String loggedInUsername;
     private int maxScore = 0;
     private String photoPath;
+    private int difficultyLevel;
 
 
     @Override
@@ -60,7 +64,6 @@ public class UserDetailsActivity extends AppCompatActivity {
             File file = new File(photoPath);
             if (file.exists()) {
                 Bitmap myBitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-                junk();
                 profilePicture.setImageBitmap(myBitmap);
                 profilePicture.setRotation(-90);
 
@@ -68,54 +71,6 @@ public class UserDetailsActivity extends AppCompatActivity {
         }
     }
 
-    private void junk() {
-        try {
-            int inWidth = 0;
-            int inHeight = 0;
-
-            InputStream in = new FileInputStream(photoPath);
-
-            // decode image size (decode metadata only, not the whole image)
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inJustDecodeBounds = true;
-            BitmapFactory.decodeStream(in, null, options);
-            in.close();
-            in = null;
-
-            // save width and height
-            inWidth = options.outWidth;
-            inHeight = options.outHeight;
-
-            // decode full image pre-resized
-            in = new FileInputStream(photoPath);
-            options = new BitmapFactory.Options();
-            // calc rought re-size (this is no exact resize)
-            options.inSampleSize = Math.max(inWidth / 100, inHeight / 100);
-            // decode full image
-            Bitmap roughBitmap = BitmapFactory.decodeStream(in, null, options);
-
-            // calc exact destination size
-            Matrix m = new Matrix();
-            RectF inRect = new RectF(0, 0, roughBitmap.getWidth(), roughBitmap.getHeight());
-            RectF outRect = new RectF(0, 0, 100, 100);
-            m.setRectToRect(inRect, outRect, Matrix.ScaleToFit.CENTER);
-            float[] values = new float[9];
-            m.getValues(values);
-
-            // resize bitmap
-            Bitmap resizedBitmap = Bitmap.createScaledBitmap(roughBitmap, (int) (roughBitmap.getWidth() * values[0]), (int) (roughBitmap.getHeight() * values[4]), true);
-
-            // save image
-            try {
-                FileOutputStream out = new FileOutputStream(photoPath);
-                resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 80, out);
-            } catch (Exception e) {
-                Log.e("Image", e.getMessage(), e);
-            }
-        } catch (IOException e) {
-            Log.e("Image", e.getMessage(), e);
-        }
-    }
 
     private void init() {
         Button btnLogout = findViewById(R.id.btnLogout);
@@ -159,6 +114,7 @@ public class UserDetailsActivity extends AppCompatActivity {
 
     public void btnStartgameClicked(View view) {
         Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra(LEVEL, difficultyLevel);
         startActivityForResult(intent, REQUEST_CODE);
     }
 
@@ -173,5 +129,11 @@ public class UserDetailsActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public void selectDifficulty(View view) {
+        String tag = (String) view.getTag();
+        TastyToast.makeText(this, "level selected " + tag, TastyToast.LENGTH_SHORT, TastyToast.INFO);
+        difficultyLevel = Integer.valueOf(tag);
     }
 }

@@ -149,17 +149,23 @@ public class SignupFragment extends DialogFragment implements View.OnClickListen
         BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
         bitmapOptions.inJustDecodeBounds = true;
         BitmapFactory.decodeFile(profilePicturePath, bitmapOptions);
-        int photoWidth = bitmapOptions.outWidth;
+        /*int photoWidth = bitmapOptions.outWidth;
         int photoHeight = bitmapOptions.outHeight;
         int scaleFactor = Math.min(photoWidth / imageWidth, photoHeight / imageHeight);
         bitmapOptions.inJustDecodeBounds = false;
         bitmapOptions.inSampleSize = scaleFactor;
-
         Bitmap bitmap = BitmapFactory.decodeFile(profilePicturePath, bitmapOptions);
         profilePicture.setImageBitmap(bitmap);
-        profilePicture.setRotation(-90);
+        profilePicture.setRotation(-90);*/
+        if (profilePicturePath != null) {
+            File file = new File(profilePicturePath);
+            if (file.exists()) {
+                Bitmap myBitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+                //junk();
+                profilePicture.setImageBitmap(myBitmap);
+                profilePicture.setRotation(-90);
 
+            }
+        }
     }
-
-
 }

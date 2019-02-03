@@ -1,28 +1,26 @@
 package com.example.alon.a2018_17_12_userloginexhomework;
 
-import android.content.Context;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.CountDownTimer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.sdsmdg.tastytoast.TastyToast;
-
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
+    public static final String LEVEL = "level";
     //public static final int GAME_TIME = 10100;
     public static int GAME_TIME = 0;
     public static final int COUNT_DOWN_INTERVAL = 1000;
@@ -35,7 +33,7 @@ public class GameActivity extends AppCompatActivity {
     private int score = 0;
     private int numberOfQuestions = 0;
     private int maxResult;
-    private MediaPlayer mediaPlayer = null;
+    public static Handler handler;
 
 
     @Override
@@ -46,6 +44,7 @@ public class GameActivity extends AppCompatActivity {
 
 
     }
+
 
     private void initGame() {
         tvSum = findViewById(R.id.tvSum);
@@ -60,10 +59,22 @@ public class GameActivity extends AppCompatActivity {
         tvTimer = findViewById(R.id.tvTimer);
         btnPlayAgain = findViewById(R.id.btnPlayAgain);
         tvGoBack = findViewById(R.id.tvGoBack);
+        handler = new Handler(new Handler.Callback() {
+            @Override
+            public boolean handleMessage(Message msg) {
+                generateQuestion();
+                startTimer();
+                return false;
+            }
+        });
+        int level = getIntent().getIntExtra(LEVEL, -1);
+        if (level < 1 || level > 4 ){
+            Log.d("alon","invalid level");
+            return;
+        }
         GameTask gameTask = new GameTask();
-        gameTask.execute(new GameParams(2));
-        generateQuestion();
-        startTimer();
+        gameTask.execute(new GameParams(level));
+
 
     }
 
@@ -74,16 +85,11 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 tvTimer.setText(String.format("%ss", String.valueOf(millisUntilFinished / 1000)));
-                mediaPlayer = MediaPlayer.create(GameActivity.this, R.raw.tick);
-                mediaPlayer.start();
-
             }
 
             @Override
             public void onFinish() {
                 tvResult.setText("Done! your result is " + score);
-                //mediaPlayer.stop();
-                mediaPlayer = null;
                 btnPlayAgain.setVisibility(View.VISIBLE);
                 tvGoBack.setVisibility(View.VISIBLE);
                 setButtonsClickable(false);
@@ -96,7 +102,7 @@ public class GameActivity extends AppCompatActivity {
         }.start();
     }
 
-    private void generateQuestion() {
+    public void generateQuestion() {
         Random random = new Random();
         int firstNumber = 1 + random.nextInt(31);
         int secondNumber = 1 + random.nextInt(31);
@@ -131,14 +137,11 @@ public class GameActivity extends AppCompatActivity {
         if (Integer.toString(locationOfCorrectAnswer).equals(clickedAnswerTag)) {
             tvResult.setText("Correct!");
             score++;
-            final MediaPlayer mp = MediaPlayer.create(this, R.raw.right_answer);
-            mp.start();
         } else {
             tvResult.setText("Wrong :(");
         }
         numberOfQuestions++;
         tvScore.setText(String.format(Locale.getDefault(), "%s", Integer.toString(score) + "/" + Integer.toString(numberOfQuestions)));
-        mediaPlayer.stop();
         generateQuestion();
     }
 
@@ -147,7 +150,8 @@ public class GameActivity extends AppCompatActivity {
         numberOfQuestions = 0;
         setButtonsClickable(true);
         tvGoBack.setVisibility(View.INVISIBLE);
-        tvTimer.setText("30s");
+        int timeRested = GAME_TIME / 1000;
+        tvTimer.setText(String.valueOf(timeRested));
         tvScore.setText(String.format(Locale.getDefault(), "%s", Integer.toString(score) + "/" + Integer.toString(numberOfQuestions)));
         startTimer();
         generateQuestion();
@@ -176,7 +180,9 @@ public class GameActivity extends AppCompatActivity {
     private static class GameTask extends AsyncTask<GameParams, Void, Integer> {
 
 
-        public static final String BASE_URL = "http://10.0.2.2:8080/braintest_server_war_exploded/MainServlet";
+        //public static final String BASE_URL = "http://10.0.2.2:8080/braintest_server_war_exploded/MainServlet";
+        public static final String BASE_URL = "http://localhost:8080/braintest_server_war_exploded/MainServlet";
+        //public static final String BASE_URL = "http://192.168.1.16:8080/braintest_server_war_exploded/MainServlet";
 
         @Override
         protected Integer doInBackground(GameParams... gameParams) {
@@ -189,6 +195,7 @@ public class GameActivity extends AppCompatActivity {
                 return null;
             try {
                 int result = Integer.valueOf(response);
+                GAME_TIME = result;
                 return result;
             } catch (Exception ex){
                 ex.printStackTrace();
@@ -198,12 +205,7 @@ public class GameActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Integer integer) {
-            if (integer == null){
-                Log.d("alon", "null integer result from server");
-            } else {
-                GAME_TIME = integer;
-            }
-
+            handler.sendMessage(new Message());
         }
     }
 }

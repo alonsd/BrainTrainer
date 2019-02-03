@@ -7,8 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ab0c3a4-939d-48c2-b3b4-6cdd11d9723b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Braintest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/drawable/button_round_corners_difficulty_levels.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/drawable/button_round_corners_orange.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/drawable/button_round_corners_yellow.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_user_logged_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_user_logged_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../braintest/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/GameActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/GameActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/SignupFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/SignupFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/UserDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/UserDetailsActivity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/alon/MainServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="420">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -68,7 +76,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -223,15 +231,15 @@
       <workItem from="1548757146131" duration="1519000" />
       <workItem from="1548830232183" duration="5660000" />
       <workItem from="1549175799414" duration="2331000" />
-      <workItem from="1549191121018" duration="695000" />
+      <workItem from="1549191121018" duration="701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10205000" />
+    <option name="totallyTimeSpent" value="10211000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4946071" visible="true" weight="0.18550107" />
@@ -291,8 +299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/alon/MainServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>
