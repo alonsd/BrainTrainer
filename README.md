@@ -1,1 +1,1 @@
-# braintest game
+# Braintest Game
