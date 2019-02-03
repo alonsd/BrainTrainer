@@ -5,3 +5,5 @@ This client - server based Android app let's you create a user profile which sav
 Currently supports only local server on your computer. In order to start the server - clone the projec, start the server project on Intellij Ultimate and run it. Once the server is up, run the Android project on your PC using emulator/self device* and start playing. 
 *in order to start on a physical device, change the BASE_URL variable IP adress in GameActivity class to your own IP. make sure you are connected to the same wi-fi as your computer running the server is. 
 
+<img src="https://github.com/alonsd/braintest-game/blob/master/braintest_game.jpeg" width="400"/>           <img src="https://github.com/alonsd/braintest-game/blob/master/braintest_user_details.jpeg" width="400"/>
+
