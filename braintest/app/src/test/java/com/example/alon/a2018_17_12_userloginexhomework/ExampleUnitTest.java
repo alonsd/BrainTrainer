@@ -1,4 +1,4 @@
-package com.example.braintest_client;
+package com.example.alon.a2018_17_12_userloginexhomework;
 
 import org.junit.Test;
 

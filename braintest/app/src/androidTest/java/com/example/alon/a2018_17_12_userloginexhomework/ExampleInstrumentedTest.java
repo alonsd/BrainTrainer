@@ -1,8 +1,8 @@
-package com.example.braintest_client;
+package com.example.alon.a2018_17_12_userloginexhomework;
 
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.braintest_client", appContext.getPackageName());
+        assertEquals("com.example.alon.a2018_17_12_userloginexhomework", appContext.getPackageName());
     }
 }
