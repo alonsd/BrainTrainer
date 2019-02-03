@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ab0c3a4-939d-48c2-b3b4-6cdd11d9723b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Braintest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/drawable/button_round_corners_difficulty_levels.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/drawable/button_round_corners_orange.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/drawable/button_round_corners_yellow.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_user_logged_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Braintest/app/src/main/res/layout/activity_user_logged_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../braintest/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/GameActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/GameActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/SignupFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/SignupFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/UserDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/app/src/main/java/com/example/alon/a2018_17_12_userloginexhomework/UserDetailsActivity.java" afterDir="false" />
-    </list>
+    <list default="true" id="5ab0c3a4-939d-48c2-b3b4-6cdd11d9723b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,12 +220,12 @@
       <workItem from="1548757146131" duration="1519000" />
       <workItem from="1548830232183" duration="5660000" />
       <workItem from="1549175799414" duration="2331000" />
-      <workItem from="1549191121018" duration="701000" />
+      <workItem from="1549191121018" duration="1297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10211000" />
+    <option name="totallyTimeSpent" value="10807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
