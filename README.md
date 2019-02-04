@@ -25,5 +25,5 @@ In order to start the server - clone the projec, start the server project on Int
 
 This project is licensed under The Unlicense - see the [LICENSE](LICENSE) file for details
 
-<img src="https://github.com/alonsd/braintest-game/blob/master/braintest_game.jpeg" width="400"/>           <img src="https://github.com/alonsd/braintest-game/blob/master/braintest_user_details.jpeg" width="400"/>
+<img src="https://github.com/alonsd/braintest-game/blob/master/braintest_game.jpeg" width="200"/>           <img src="https://github.com/alonsd/braintest-game/blob/master/braintest_user_details.jpeg" width="200"/>
 
