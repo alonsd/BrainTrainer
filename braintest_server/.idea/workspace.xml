@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ab0c3a4-939d-48c2-b3b4-6cdd11d9723b" name="Default Changelist" comment="" />
+    <list default="true" id="5ab0c3a4-939d-48c2-b3b4-6cdd11d9723b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Braintest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Braintest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../braintest/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../braintest/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../braintest/.idea/caches/gradle_models.ser" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/alon/MainServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -65,7 +69,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -220,28 +224,27 @@
       <workItem from="1548757146131" duration="1519000" />
       <workItem from="1548830232183" duration="5660000" />
       <workItem from="1549175799414" duration="2331000" />
-      <workItem from="1549191121018" duration="1784000" />
+      <workItem from="1549191121018" duration="1901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11294000" />
+    <option name="totallyTimeSpent" value="11411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4946071" visible="true" weight="0.18550107" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4951246" visible="true" weight="0.18550107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.5053929" side_tool="true" visible="true" weight="0.18550107" />
+      <window_info id="Web" order="7" sideWeight="0.5048754" side_tool="true" visible="true" weight="0.18550107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.29685807" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.29685807" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -289,7 +292,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/alon/MainServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>
