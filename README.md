@@ -1,4 +1,4 @@
-# Braintest Game
+# BrainTrainer Game
 
 ## Check how fast you are! 
 
